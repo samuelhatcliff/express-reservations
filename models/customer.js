@@ -12,6 +12,7 @@ class Customer {
     this.lastName = lastName;
     this.phone = phone;
     this.notes = notes;
+    this.fullName = this.getFullName()
   }
 
   /** find all customers. */
@@ -77,6 +78,11 @@ class Customer {
         [this.firstName, this.lastName, this.phone, this.notes, this.id]
       );
     }
+  }
+
+  getFullName() {
+    const fullName = `${this.firstName} ${this.lastName}`
+    return fullName;
   }
 }
 
